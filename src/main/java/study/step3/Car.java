@@ -8,11 +8,6 @@ public class Car {
     private static final int STARTING_CONDITION = 4;
     private static final int RANDOM_RANGE = 10;
     private int attemptCount = 0;
-    private int finish;
-
-    Car(int finish) {
-        this.finish = finish;
-    }
 
     public void move() {
         moveCar(isMove(random.nextInt(RANDOM_RANGE)));
@@ -27,10 +22,6 @@ public class Car {
         if (moveResult) {
             move++;
         }
-    }
-
-    public Boolean isFinish() {
-        return finish == attemptCount;
     }
 
     public int getMove() {

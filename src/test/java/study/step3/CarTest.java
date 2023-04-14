@@ -10,7 +10,7 @@ class CarTest {
 
     @BeforeEach
     void setCar() {
-        car = new Car(5);
+        car = new Car();
     }
 
     @Test
@@ -41,15 +41,6 @@ class CarTest {
                 assertThat(move).isEqualTo(false);
             }
         }
-    }
-
-    @Test
-    public void 자동차_마지막바퀴_테스트() {
-        //given
-        for (int i = 0; i < 5; i++) {
-            car.move();
-        }
-        assertThat(car.isFinish()).isEqualTo(true);
     }
 
 }

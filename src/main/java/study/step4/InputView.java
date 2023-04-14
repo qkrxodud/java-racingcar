@@ -1,4 +1,4 @@
-package study.step3;
+package study.step4;
 
 import java.util.Scanner;
 
@@ -10,13 +10,13 @@ public class InputView {
         throw new AssertionError();
     }
 
-    public static int askCarCount() {
-        System.out.println("자동차 대수는 몇 대 인가요?\n");
-        return scanner.nextInt();
+    public static String askCarName() {
+        System.out.println("경주할 자동차 이름을 입력하세요(이름은 쉼표(,)를 기준으로 구분).");
+        return scanner.next();
     }
 
     public static int aksFinishCount() {
-        System.out.println("마지막 바퀴는 몇바퀴 인가요?\n");
+        System.out.println("시도할 회수는 몇회인가요?");
         return scanner.nextInt();
     }
 }

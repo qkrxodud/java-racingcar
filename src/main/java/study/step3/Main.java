@@ -5,9 +5,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // 입력 화면
-        Scanner scanner = InputView.createScanner();
-        InputView.askCarCount();
-        int carCount = scanner.nextInt();
+        Scanner scanner = InputView.scanner;
+        int carCount = InputView.askCarCount();
         InputView.aksFinishCount();
         int finish = scanner.nextInt();
 

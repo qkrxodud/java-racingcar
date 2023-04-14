@@ -1,4 +1,4 @@
-package study.step3;
+package study.step4;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ class TrackTest {
 
     @BeforeEach
     void setCar() {
-        track = new Track(5, 5);
+        track = new Track("pobi,crong,honux", 5);
     }
 
     @Test
@@ -30,5 +30,16 @@ class TrackTest {
             track.startRacing();
         }
         assertThat(track.isRaceEnd()).isEqualTo(true);
+    }
+
+    @Test
+    void 경기우승자() {
+        track.startRacing();
+        track.determineWinner();
+        int winnerPosition = track.getWinnerPosition();
+        List<Car> winnerCars = track.getWinnerCars();
+        for (Car winnerCar : winnerCars) {
+            assertThat(winnerCar.getPosition()).isEqualTo(winnerPosition);
+        }
     }
 }
